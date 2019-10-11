@@ -1,9 +1,9 @@
 cmake_minimum_required(VERSION 3.15)
-project(sampleUffMNIST)
+project(sampleGoogleNet)
 
 set(CMAKE_CXX_STANDARD 14)
 
-set(SOURCE_FILES sampleUffMNIST.cpp /home/linghu8812/deeplearning/TensorRT-6.0.1.5/samples/common/logger.cpp)
+set(SOURCE_FILES sampleGoogleNet.cpp /home/linghu8812/deeplearning/TensorRT-6.0.1.5/samples/common/logger.cpp)
 set(INC_DIR /home/linghu8812/deeplearning/TensorRT-6.0.1.5/samples/common
         /home/linghu8812/deeplearning/TensorRT-6.0.1.5/include
         /usr/local/cuda/include)
@@ -14,5 +14,5 @@ include_directories(${INC_DIR})
 link_directories(${LINK_DIR})
 link_libraries(libnvcaffe_parser.so libnvinfer.so libcudart.so.10.0)
 
-add_executable(sampleUffMNIST ${SOURCE_FILES})
-target_link_libraries(sampleUffMNIST libnvcaffe_parser.so libnvinfer.so libcudart.so.10.0)
+add_executable(sampleGoogleNet ${SOURCE_FILES})
+target_link_libraries(sampleGoogleNet libnvcaffe_parser.so libnvinfer.so libcudart.so.10.0)
